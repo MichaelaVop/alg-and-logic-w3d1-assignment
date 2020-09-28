@@ -6,4 +6,17 @@
 
 const fibonacciRecursive = function(n) {
 
+    if (n === 0) {
+        return 0;
+    } 
+    if (n === 1) {
+        return [0, 1];
+    }
+    let list = fibonacciRecursive(n - 1);
+    list.push(list[list.length - 1] + list[list.length - 2]);
+    return list;
+ 
+
 }
+
+console.log(fibonacciRecursive(13));
